@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { Header } from './Header/header';
+import { Component, Input } from '@angular/core';
+import { Header } from './header/header';
 import { User } from "./user/user";
 import { DUMMY_USERS } from './dummy-users';
 
@@ -9,6 +9,13 @@ import { DUMMY_USERS } from './dummy-users';
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
+
+
+
 export class App {
   users = DUMMY_USERS;
+
+  onCurrentUserSelect(id: string){
+    console.log('არჩეული მომხმარებლის ID არის:', id);
+  }
 }
